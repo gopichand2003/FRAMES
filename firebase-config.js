@@ -1,6 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -17,4 +14,6 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 
 export { app, db, auth };
-//Test deploy
+
+console.log("Config:", firebaseConfig); // Test deploy
+const app = initializeApp(firebaseConfig);
